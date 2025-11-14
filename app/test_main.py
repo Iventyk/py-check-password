@@ -17,5 +17,5 @@ from app.main import check_password
         pytest.param("Привіт1@Q", False, id="cyrillic"),
     ]
 )
-def test_check_password(password, expected):
+def test_check_password(password: str, expected: float) -> None:
     assert check_password(password) is expected
